@@ -1,0 +1,13 @@
+<div class="project">
+    <h3 class="pgTitle">Top Projects</h3>
+    <div class="projectList" *ngFor="let proj of projectList">
+        <p class="projectTitle">{{proj.projTitle}}</p>
+        <p class="role"><span>Role: </span>{{proj.projRole}}</p>
+        <p class="tech"><span>Technologies Used: </span>{{proj.projTech}} </p>
+        <p class="desc">{{proj.projDesc}}</p>
+        <ul *ngIf='proj.keyFeature'>
+            <span>Key features</span>
+            <li *ngFor="let key of proj.keyFeature"><i class="fa-solid fa-leaf listLeaf"></i>{{key.key}}</li>
+        </ul>
+    </div>
+</div>

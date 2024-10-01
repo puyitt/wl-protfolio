@@ -1,0 +1,11 @@
+<div class="skill">
+    <h3 class="pgTitle">My Skills</h3>
+    <p>With a passion for continuous learning and innovation, I bring a diverse and ever-evolving skill set to each project I undertake. Below are some of the key skills that empower my work.</p>
+    <div class="skillGroup" >
+        <div class="skillBar" *ngFor="let skill of skills">
+            <span class="skillName">{{skill.name}}</span>
+            <div class="range" [ngStyle]="{'background-color': '#e4a31e', 'width': skill.percent + '%'}"></div>
+            <span class="skillPercent">{{skill.percent}}%</span>
+        </div>
+    </div>
+</div>

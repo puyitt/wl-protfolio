@@ -1,0 +1,57 @@
+@import '../../variables.scss';
+@import '../../app.component.scss';
+
+.skill {
+    background: $font-color;
+    border-radius: 20px;
+    box-shadow: $box-shadow;
+    padding: 80px 50px;
+    box-sizing: border-box;
+
+    .skillGroup {
+        margin-top: 40px;
+        display: flex;
+        flex-flow: wrap;
+        gap: 30px;
+
+        .skillBar {
+            width: 48%;
+            height: 4px;
+            margin-top: 30px;
+            background-color: #EBEBEB;
+            border-radius: 0;
+            box-shadow: none;
+            border-radius: 5px;
+            position: relative;
+
+            .skillName {
+                position: absolute;
+                left: 0;
+                top: -23px;
+                font-weight: bold;
+            }
+
+            .skillPercent {
+                position: absolute;
+                right: 0;
+                top: -23px;
+                color: $font-color3;
+            }
+
+            .range {
+                height: 100%;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .skill {
+        .skillGroup {
+            .skillBar {
+                width: 100%;
+            }
+        }
+    }
+}

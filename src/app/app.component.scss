@@ -1,0 +1,105 @@
+@import 'variables.scss';
+
+.twoCol {
+    width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    padding: 0 0 50px 0;
+    
+    .sideBar {
+        width: 265px;
+    }
+    
+    .main {
+        width: calc(100% - 315px);
+
+        .mobile-header {
+            display: none;
+        }
+    }
+}
+
+.myButton {
+    width: fit-content;
+    height: 32px;
+    background-color: $secoundary-color;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    color: #fff;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 30px;
+    top: 0;
+    transition: all 0.3s;
+
+    &:hover {
+        box-shadow: $box-shadow-hover;
+    }
+}
+
+.myButtonOutline {
+    width: fit-content;
+    height: 32px;
+    border: 1px solid $secoundary-color;
+    background-color: transparent;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    color: $secoundary-color;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 30px;
+}
+
+.fullStop {
+    font-size: 50px;
+    color: $secoundary-color
+}
+
+.pgTitle {
+    color: $font-color2;
+    font-size: 24px;
+    letter-spacing: 1px;
+    position: relative;
+    margin-bottom: 60px;
+
+    &::before {
+        content: "";
+        background: $secoundary-color;
+        border-radius: 25px;
+        height: 5px;
+        width: 30px;
+        position: absolute;
+        bottom: -15px;
+    }
+}
+
+.divider {
+    height: 50px;
+}
+
+@media screen and (max-width: 980px) {
+    .twoCol {
+        width: 100%;
+        padding: 30px;
+
+        .sideBar {
+            display: none;
+        }
+        
+        .main {
+            width: 100%;
+
+
+            .mobile-header {
+                display: block;
+             }
+        }
+    }
+}

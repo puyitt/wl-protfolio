@@ -1,0 +1,52 @@
+@import '../../variables.scss';
+@import '../../app.component.scss';
+
+.contact {
+    color: $font-color;
+    background: $primary-color;
+    border-radius: 20px;
+    box-shadow: $box-shadow;
+    padding: 80px 50px;
+    box-sizing: border-box;
+
+    .pgTitle {
+        color: $font-color;
+    }
+
+    .contactInfo {
+        margin-top: 30px;
+        display: block;
+
+        i {
+            margin-right: 10px;
+            color: $secoundary-color;
+        }
+    }
+
+    .footer {
+        .social {
+            margin-top: 40px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+    
+            li {
+                a {
+                    width: 30px;
+                    height: 30px;
+                    background-color: $secoundary-color;
+                    border-radius: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    
+        .copyright {
+            margin-top: 10px;
+            font-size: 10px;
+            text-align: center;
+        }
+    }
+}

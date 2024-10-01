@@ -1,0 +1,32 @@
+@import '../../variables.scss';
+@import '../../app.component.scss';
+
+.mobile {
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .profileImg {
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+        margin: 0;
+        background-color: #fff;
+        overflow: hidden;
+        text-align: center;
+    
+        img {
+            margin-top: 10px;
+        }
+    }
+
+    .menuIcon {
+        i {
+            font-size: 35px;
+            color: $secoundary-color;
+        }
+    }
+}

@@ -1,0 +1,129 @@
+@import '../../variables.scss';
+@import '../../app.component.scss';
+
+.experience {
+    background: $font-color;
+    border-radius: 20px;
+    box-shadow: $box-shadow;
+    padding: 80px 50px;
+    box-sizing: border-box;
+
+    .timeline {
+        position: relative;
+        padding: 70px 0;
+
+        .entry {
+            display: flex;
+            margin-bottom: 6em;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            .title {
+                width: 20%;
+                position: relative;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 8px;
+                    height: 8px;
+                    border: 1px solid $secoundary-color;
+                    background-color: #fff;
+                    border-radius: 100%;
+                    padding: 4.5px;
+                    top: 5px;
+                    right: -8px;
+                    z-index: 1;
+                    box-sizing: border-box;
+                }
+            }
+
+            .body {
+                width: 80%;
+                padding-left: 60px;
+
+                h4 {
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+
+                h5 {
+                    font-size: 16px;
+                    color: $secoundary-color;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    margin-bottom: 10px;
+                }
+
+                ul {
+                    li {
+                        padding-left: 25px;
+                        margin-bottom: 15px;
+                        position: relative;
+
+                        .listLeaf {
+                            position: absolute;
+                            left: 0;
+                            top: 3px;
+                            color: $primary-color;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .timeline-line {
+            position: absolute;
+            top: 0px;
+            left: calc(20% + 2px);
+            bottom: 0px;
+            width: 1px;
+            background: $secoundary-color;
+
+
+            &::before {
+                top: 0;
+            }
+            &::before,
+            &::after {
+                content: "";
+                display: block;
+                border-radius: 100%;
+                background: $secoundary-color;
+                position: absolute;
+                left: -3px;
+                height: 7px;
+                width: 7px;
+            }
+
+            &::after {
+                bottom: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .experience {
+        .timeline {
+
+            .entry {
+                display: flex;
+                margin-bottom: 4em;
+
+                .title {
+                    padding-right: 10px;
+                }
+
+                .body {
+                    padding-left: 30px;
+                }
+            }
+        }
+    }
+}

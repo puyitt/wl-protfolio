@@ -1,0 +1,86 @@
+@import '../../variables.scss';
+@import '../../app.component.scss';
+
+.sideBar {
+    color: #FFF;
+    background: $primary-color;
+    border-radius: 20px;
+    position: fixed;
+    width: 265px;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow: $box-shadow;
+    margin-top: 50px;
+    
+    .profileImg {
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+        margin: 0;
+        background-color: #fff;
+        overflow: hidden;
+        text-align: center;
+
+        img {
+            margin-top: 10px;
+        }
+    }
+
+    h1 {
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+
+    .position {
+        margin-bottom: 30px;
+        font-size: 14px;
+    }
+
+    .menu {
+        list-style: none;
+
+        li {
+            &:last-of-type {
+                button {
+                    margin-bottom: 0;
+                }
+            }
+
+            button {
+                display: flex;
+                align-items: center;
+                margin-bottom: 30px;
+                position: relative;
+                font-size: 16px;
+                color: #fff;
+                transition: all 0.5s;
+                left: 0;
+
+                &:hover {
+                    left: 10px;
+                }
+
+                // &.active {
+                //     &::before {
+                //         content: '';
+                //         width: 5px;
+                //         height: 100%;
+                //         position: absolute;
+                //         left: -30px;
+                //         top: 0;
+                //         background-color: $secoundary-color;
+                //     }
+                // }
+
+                i {
+                    width: 15px;
+                    margin-right: 8px;
+                    display: inline-block;
+                    font-size: 12px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+

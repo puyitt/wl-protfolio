@@ -1,0 +1,19 @@
+<div class="experience">
+    <h3 class="pgTitle">My Experiences</h3>
+    <div class="timeline">
+        <div class="entry" *ngFor="let exp of experience">
+            <div class="title">
+                <span>{{exp.date}}</span>
+            </div>
+            <div class="body">
+                <h4 class="">{{exp.position}}</h4>
+                <h5 class="">{{exp.company}}</h5>
+                <p>{{exp.body}}</p>
+                <ul>
+                    <li *ngFor="let desc of exp.desc"><i class="fa-solid fa-leaf listLeaf"></i>{{desc.des}}</li>
+                </ul>
+            </div>
+        </div>
+        <span class="timeline-line"></span>
+    </div>
+</div>
