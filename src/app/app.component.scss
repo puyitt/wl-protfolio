@@ -17,6 +17,10 @@
         .mobile-header {
             display: none;
         }
+        .menuButton,
+        .mobileMenu {
+            display: none;
+        }
     }
 }
 
@@ -98,6 +102,7 @@
             position: relative;
 
             .menuButton {
+                display: block;
                 position: fixed;
                 left: -56px;
                 top: calc((100% - 70px)/2);
@@ -116,7 +121,7 @@
                 i {
                     color: $font-color;
                     position: absolute;
-                    right: 4px;
+                    right: 5px;
                     top: calc((100% - 16px) / 2);
                 }
             }
