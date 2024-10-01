@@ -95,8 +95,77 @@
         
         .main {
             width: 100%;
+            position: relative;
 
+            .menuButton {
+                position: fixed;
+                left: -56px;
+                top: calc((100% - 70px)/2);
+                background-color: $secoundary-color;
+                width: 80px;
+                height: 70px;
+                border-radius: 100%;
+                line-height: 70px;
+                box-shadow: 0px 0px 15px 1px #00000078;
+                transition: all 0.5s;
 
+                &.activeBtn {
+                    left: -1000px;
+                }
+
+                i {
+                    color: $font-color;
+                    position: absolute;
+                    right: 4px;
+                    top: calc((100% - 16px) / 2);
+                }
+            }
+
+            .mobileMenu {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $secoundary-color;
+                position: fixed;
+                left: -100px;
+                top: calc((100% - 266px)/2);
+                z-index: 3;
+                border-radius: 10px;
+                padding: 20px 10px;
+                transition: all 0.5s;
+                box-shadow: 0px 0px 15px 1px #00000078;
+                
+                &.active {
+                    left: 10px;
+                }
+
+                .close {
+                    color: $font-color;
+                    position: absolute;
+                    top: -5px;
+                    right: -5px;
+
+                    i {
+                        font-size: 15px;
+                    }
+                }
+
+                ul {
+                    li {
+                        margin-bottom: 20px;
+                        text-align: center;
+
+                        &:last-of-type {
+                            margin-bottom: 0;
+                        }
+
+                        i {
+                            font-size: 20px;
+                            color: $font-color;
+                        }
+                    }
+                }
+            }
             .mobile-header {
                 display: block;
              }

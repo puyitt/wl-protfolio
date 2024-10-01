@@ -10,6 +10,7 @@ import { filter } from 'rxjs/operators';
 })
 export class AppComponent implements OnInit{
   title = 'Win Lai Yee Mon';
+  isToggled: boolean = false;
 
   constructor() {}
 
@@ -25,6 +26,13 @@ export class AppComponent implements OnInit{
       });
   }
 
+  addClass() {
+    this.isToggled = true;
+  }
+  
+  removeClass() {
+    this.isToggled = false;
+  }
   // observeDividers(): void {
   //   // IntersectionObserver setup
   //   const observer = new IntersectionObserver((entries) => {

@@ -1,6 +1,18 @@
 <div class="twoCol">
   <app-sidebar class="sideBar" (scrollToSection)="scrollToSection($event)"></app-sidebar>
   <div class="main">
+    <div class="menuButton" (click)="addClass()" [ngClass]="{'activeBtn': isToggled}"><i class="fa-solid fa-angles-right"></i></div>
+    <div class="mobileMenu" [ngClass]="{'active': isToggled}">
+      <button class="close" (click)="removeClass()"><i class="fa-solid fa-circle-xmark"></i></button>
+      <ul class="menu">
+        <li><button (click)="scrollToSection('home')"><i class="fa-solid fa-house-chimney"></i></button></li>
+        <li><button (click)="scrollToSection('about')"><i class="fa-regular fa-user"></i></button></li>
+        <li><button (click)="scrollToSection('skill')"><i class="fa-solid fa-list"></i></button></li>
+        <li><button (click)="scrollToSection('experience')"><i class="fa-solid fa-graduation-cap"></i></button></li>
+        <li><button (click)="scrollToSection('project')"><i class="fa-solid fa-diagram-project"></i></button></li>
+        <li><button (click)="scrollToSection('contact')"><i class="fa-solid fa-phone"></i></button></li>
+    </ul>
+    </div>
     <app-mobile-header class="mobile-header"></app-mobile-header>
     <div class="divider" id="home"></div>
     <app-hero></app-hero>

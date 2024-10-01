@@ -52,7 +52,7 @@ export class SkillComponent {
     },
     {
       name: 'Confluence',
-      percent: '90'
+      percent: '20'
     }
   ]
     
